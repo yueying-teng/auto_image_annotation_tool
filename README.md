@@ -35,6 +35,7 @@ python classify_folder.py /inception/data/video_frames/input_imgs
 
 ### example result 
 the following frame 
+
 <img src="https://github.com/yueying-teng/auto_image_annotation_tool/blob/master/data/video_frames/mountain_lake/mountain_lake007.jpg" height="300">
 
 has the following labls 
