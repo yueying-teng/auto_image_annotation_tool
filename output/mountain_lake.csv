@@ -1,0 +1,8 @@
+image_id,label_confidence_pair
+/inception/data/video_frames/mountain_lake/mountain_lake001.jpg,lake 0.807 nature 0.78 body of water 0.755 sea 0.672 shore 0.657 loch 0.565 coast 0.554 tree 0.505 reservoir 0.483 mountain 0.463
+/inception/data/video_frames/mountain_lake/mountain_lake002.jpg,lake 0.877 nature 0.779 mountain 0.769 loch 0.753 body of water 0.668 cloud 0.647 reservoir 0.568 sea 0.56 shore 0.497 sky 0.496
+/inception/data/video_frames/mountain_lake/mountain_lake003.jpg,lake 0.878 loch 0.768 nature 0.737 body of water 0.715 sea 0.706 mountain 0.686 cloud 0.683 shore 0.664 reservoir 0.577 coast 0.564
+/inception/data/video_frames/mountain_lake/mountain_lake004.jpg,lake 0.904 loch 0.838 mountain 0.806 nature 0.677 cloud 0.675 body of water 0.663 reservoir 0.621 sea 0.585 mountainous landforms 0.543 shore 0.522
+/inception/data/video_frames/mountain_lake/mountain_lake005.jpg,lake 0.9 mountain 0.798 loch 0.772 nature 0.749 body of water 0.668 reservoir 0.566 mountainous landforms 0.52 cloud 0.49 sea 0.458 wilderness 0.455
+/inception/data/video_frames/mountain_lake/mountain_lake006.jpg,lake 0.876 mountain 0.796 loch 0.712 nature 0.693 body of water 0.58 mountainous landforms 0.521 reservoir 0.496 wilderness 0.462 cloud 0.415 sea 0.411
+/inception/data/video_frames/mountain_lake/mountain_lake007.jpg,lake 0.854 mountain 0.785 nature 0.781 loch 0.629 tree 0.608 body of water 0.58 wilderness 0.527 mountainous landforms 0.486 reservoir 0.433 landscape 0.429
