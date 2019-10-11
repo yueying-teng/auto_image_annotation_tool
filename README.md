@@ -1,5 +1,5 @@
 
-## Auto Image Annotation Tool
+## Auto Image/Video Annotation Tool
 
 The pre-trained inception model (Open Image Dataset V4) is used in annotating each one second frame of the video.
 
@@ -14,14 +14,21 @@ The result for each video will be saved separatly in ```/inception/output``` wit
 docker build -t yyyyteng/inception_ffmpeg .
 docker run docker_run.sh
 ```
-2. run annotation job on the example video, mountain_lake.MOV, in ```/inception/data/video```
+2. run annotation job on the example video, mountain_lake.MOV, in ```/inception/data/video```. 
+this will download the pretrained model, split the video into frames, run prediction over all frames and save the results to csvs automatically
 ```
 bash start.sh
 ```
+
+
 4. all the one second frames will be extracted and saved in ```/inception/data/video_frames``` 
 
 5. annotation result will be saved under ```/inception/output``` in a csv with the same name as that of the input video
 
+6. if aggregated result is need, run the following in ```/inception/scripts```, it will print the top ten most frequent labels with their frequencies for the whole video
+```
+python aggregate_result.py /inception/output/mountain_lake.csv
+```
 
 
 ### this tool can also be used on images directly.
