@@ -35,7 +35,7 @@ python classify_folder.py /inception/data/video_frames/input_imgs
 
 ### example result 
 the following frame 
-<img src="https://git.dmm.com/ai/feature_library_trailers/blob/master/docker_inception/data/video_frames/cat/cat007.jpg" height="250">
+<img src="https://github.com/yueying-teng/auto_image_annotation_tool/blob/master/data/video_frames/mountain_lake/mountain_lake007.jpg" height="300">
 
 has the following labls 
 ```
