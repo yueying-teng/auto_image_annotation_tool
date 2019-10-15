@@ -19,13 +19,13 @@ this will download the pretrained model, split the video into frames, run predic
 ```
 bash start.sh
 ```
-
+modify the ```make_prediciton_forall.sh``` script in ```/inception/scripts``` if any change in prediction arguments is required
 
 4. all the one second frames will be extracted and saved in ```/inception/data/video_frames``` 
 
 5. annotation result will be saved under ```/inception/output``` in a csv with the same name as that of the input video
 
-6. if aggregated result is need, run the following in ```/inception/scripts```, it will print the top ten most frequent labels with their frequencies for the whole video
+6. if aggregated result is need, run the following in ```/inception/scripts```, it will print the top ten most frequent labels with their frequencies from all the frames in the video
 ```
 python aggregate_result.py /inception/output/mountain_lake.csv
 ```

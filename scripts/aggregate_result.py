@@ -2,6 +2,8 @@
 
 # aggregates the labels from all frames in a video 
 # to return the top N most frequent labels and their frequencies
+# e.g. python aggregate_result.py /inception/output/mountain_lake.csv
+
 
 import pandas as pd
 import numpy as np
