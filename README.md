@@ -14,16 +14,25 @@ The result for each video will be saved separatly in ```/inception/output``` wit
 docker build -t yyyyteng/inception_ffmpeg .
 docker run docker_run.sh
 ```
-2. run annotation job on the example video, mountain_lake.MOV, in ```/inception/data/video```. 
+
+2. run annotation job on the example video in ```/inception/data/video```. 
 this will download the pretrained model, split the video into frames, run prediction over all frames and save the results to csvs automatically
 ```
-bash start.sh
+bash start.sh --checkpoint /inception/model/2016_08/model.ckpt \
+	--labelmap /inception/model/2016_08/labelmap.txt \
+	--dict /inception/data/dict.csv \
+	--image_size 299 \
+	--num_classes 6012 \
+	--num 10 \
+	--image_folder_path /inception/data/video_frames/
+
 ```
-modify the ```make_prediciton_forall.sh``` script in ```/inception/scripts``` if any change in prediction arguments is required
 
 4. all the one second frames will be extracted and saved in ```/inception/data/video_frames``` 
 
+
 5. annotation result will be saved under ```/inception/output``` in a csv with the same name as that of the input video
+
 
 6. if aggregated result is need, run the following in ```/inception/scripts```, it will print the top ten most frequent labels with their frequencies from all the frames in the video
 ```
@@ -34,10 +43,18 @@ python aggregate_result.py /inception/output/mountain_lake.csv
 ### this tool can also be used on images directly.
 1. put the input images in one folder under video_frames and run the following
 ```
-python classify_folder.py /inception/data/video_frames/input_imgs
+
+python classify_folder.py /inception/data/video_frames/input_imgs \
+	--checkpoint /inception/model/2016_08/model.ckpt \
+	--labelmap /inception/model/2016_08/labelmap.txt \
+	--dict /inception/data/dict.csv \
+	--image_size 299 \
+	--num_classes 6012 \
+	--n 10 
+
 ```
 
-2. annotation result for each image will be saved in a csv called input_imgs.csv under  ```/inception/output``` 
+2. annotation result for all the images in the input_imgs folder will be saved here ```/inception/output/input_imgs.csv``` 
 
 
 ### example result 
