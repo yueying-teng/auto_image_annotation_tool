@@ -9,7 +9,7 @@ The result for each video will be saved separatly in ```/inception/output``` wit
 
 
 ### steps 
-1. docker build and run 
+1. build docker container
 ```
 docker build -t yyyyteng/inception_ffmpeg .
 docker run docker_run.sh
