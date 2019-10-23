@@ -76,7 +76,6 @@ has the following labls
 ```
 
 ### streamlit demo 
-a streamlit demo of this tool for the example iamges is also included.
 run the command below and navigate to ```http://localhost:8501/``` to interact with the app
 ```
 streamlit run stremlit_app.py
