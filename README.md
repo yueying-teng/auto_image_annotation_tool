@@ -5,7 +5,7 @@ The pre-trained inception model (Open Image Dataset V4) is used in annotating ea
 
 When docker is running, put the input videos in ```/data/video```.
 
-The result for each video will be saved separatly in ```/inception/output``` with the csv names same as csv names.
+The result for each video will be saved separatly in ```/inception/output``` with the csv names same as video names.
 
 
 ### steps 
