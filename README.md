@@ -3,7 +3,7 @@
 
 The pre-trained inception model (Open Image Dataset V4) is used in annotating each one second frame of the video.
 
-When docker is running, put the input videos in ```/data/video```.
+When the container is running, put the input videos in ```/data/video```.
 
 The result for each video will be saved separatly in ```/inception/output``` with the csv names same as video names.
 
