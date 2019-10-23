@@ -43,7 +43,6 @@ python aggregate_result.py /inception/output/mountain_lake.csv
 ### this tool can also be used on images directly.
 1. put the input images in one folder under video_frames and run the following
 ```
-
 python classify_folder.py /inception/data/video_frames/input_imgs \
 	--checkpoint /inception/model/2016_08/model.ckpt \
 	--labelmap /inception/model/2016_08/labelmap.txt \
@@ -58,7 +57,7 @@ python classify_folder.py /inception/data/video_frames/input_imgs \
 
 
 ### example result 
-the following frame 
+the frame below
 
 <img src="https://github.com/yueying-teng/auto_image_annotation_tool/blob/master/data/video_frames/mountain_lake/mountain_lake007.jpg" height="300">
 
@@ -75,6 +74,14 @@ has the following labls
 4592: /m/093shy - reservoir (score = 0.43)
 1475: /m/025s3q0 - landscape (score = 0.43)
 ```
+
+### streamlit demo 
+a streamlit demo of this tool for the example iamges is also included.
+run the command below and navigate to ```http://localhost:8501/``` to interact with the app
+```
+streamlit run stremlit_app.py
+```
+
 
 ### reference
 https://github.com/openimages/dataset

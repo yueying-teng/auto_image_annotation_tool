@@ -6,3 +6,4 @@ opencv-python
 Pillow
 scipy
 pandas
+streamlit
