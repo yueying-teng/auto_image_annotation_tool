@@ -8,6 +8,8 @@ bash download_inception_model.sh
 cd /inception/data
 bash extract_frames.sh 
 
+# make prediction 
+cd /inception/scripts
 
 # parse arguments
 while [[ $# -gt 0 ]]
@@ -36,7 +38,7 @@ case $key in
     shift # past value
     ;;
     --num_classes)    
-    NUM_CALSSES="$2"
+    NUM_CLASSES="$2"
     shift # past argument
     shift # past value
     ;;
@@ -53,17 +55,16 @@ case $key in
 esac
 done
 
-# make prediction 
-cd /inception/scripts
-chmod +x make_prediction_forall.sh
-make_prediction_forall.sh \
-	--checkpoint $CHECKPOINT \
-	--labelmap $LABELMAP \
-	--dict $DICT \
-	--image_size $IMAGE_SIZE \
-	--num_classes $NUM_CALSSES \
-	--num $NUM \
-	--image_folder_path $IMAGE_FOLDER_PATH
 
+for folder in "$IMAGE_FOLDER_PATH"*; do
+    echo "$folder"
+    python classify_folder.py "$folder" \
+        --checkpoint $CHECKPOINT \
+        --labelmap $LABELMAP \
+        --dict $DICT \
+        --image_size $IMAGE_SIZE \
+        --num_classes $NUM_CLASSES \
+        --n $NUM 
 
+done
 
