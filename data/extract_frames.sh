@@ -3,7 +3,7 @@
 mkdir ./video_frames/
 cd ./video
 
-for file in *.MOV; do
+for file in *; do
 	echo "$file"
 	filename="${file%.*}"
 	mkdir -p ../video_frames/"$filename"
