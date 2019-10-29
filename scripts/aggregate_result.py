@@ -22,10 +22,15 @@ def aggregate(csv_path, num):
 
 
 	v, c = np.unique(name, return_counts = True)
+	p = c/df.shape[0]
+
 	value = v[np.argsort(-c)]
 	count = c[np.argsort(-c)]
+	# account for video length
+	prob = p[np.argsort(-p)]
 
-	print(np.array((value, count)).T[: num])
+	# print(np.array((value, count)).T[: num])
+	print(np.array((value, prob)).T[: num])
 
 
 if __name__ == '__main__':

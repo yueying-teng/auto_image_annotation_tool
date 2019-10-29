@@ -34,7 +34,7 @@ bash start.sh --checkpoint /inception/model/2016_08/model.ckpt \
 5. annotation result will be saved under ```/inception/output``` in a csv with the same name as that of the input video
 
 
-6. if aggregated result is need, run the following in ```/inception/scripts```, it will print the top ten most frequent labels with their frequencies from all the frames in the video
+6. if an aggregated result is needed, run the following in ```/inception/scripts```, it will print the top ten most frequent labels for all the frames in the video (normalized by video length)
 ```
 python aggregate_result.py /inception/output/mountain_lake.csv
 ```
